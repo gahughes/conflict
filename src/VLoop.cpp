@@ -1,4 +1,3 @@
-
 #include "VLoop.h"
 
 VLoop::VLoop( VParameters *irunpara  )
@@ -10,7 +9,6 @@ VLoop::VLoop( VParameters *irunpara  )
   // Randoms
   int seed = time(NULL)*getpid();
   rand = new TRandom3(seed);
-
   // Outout root file
   //fOutPutFile = new TFile(fRunPara->sOutPutFileName.c_str(),"RECREATE");
 

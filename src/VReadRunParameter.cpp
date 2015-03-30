@@ -78,7 +78,6 @@ void VReadRunParameter::printStartMessage()
   cout << " " << endl;
   cout << endl;
 
-
 }
 
 
@@ -98,11 +97,8 @@ void VReadRunParameter::readInPutFile( string fInfile )
   {
     while ( getline(myfile,line) )
     {
-
       istringstream stream( line );
-
       sInPuts.push_back( line );
-
     }
     myfile.close();
   }
@@ -120,20 +116,24 @@ void VReadRunParameter::readInPutFile( string fInfile )
 
   vector<string> tokens;
   vector<int> jtemp;
-  unsigned int iNum3 = atoi(sInPuts[iNum+iNum2+2].c_str());
-  for( unsigned int i = iNum+iNum2+3; i < iNum+iNum2+iNum3+3; i++ )
+  int iNextIndex = iNum+iNum2+2;
+  unsigned int iNum3 = atoi(sInPuts[iNextIndex].c_str());
+
+  iNextIndex++;
+  for( unsigned int i = iNextIndex; i < iNextIndex+iNum3; i++ )
   {
     istringstream iss(sInPuts[i]);
     copy(istream_iterator<string>(iss),istream_iterator<string>(),back_inserter(tokens));
-    fRunPara->sRules.push_back(sInPuts[i].c_str());
     for( unsigned int j = 0; j < tokens.size(); j++ )
-    {
       jtemp.push_back(atoi(tokens[j].c_str()));
-    }
     fRunPara->iRules.push_back(jtemp);
     jtemp.resize(0);
     tokens.resize(0);
   }
+
+  iNextIndex += iNum3;
+  for( unsigned int i = iNextIndex; i < iNextIndex+iNum3; i++ )
+    fRunPara->sRules.push_back(sInPuts[i].c_str());
 
   fRunPara->iNumberOfParties = iNum;
   fRunPara->iNumberOfIssues  = iNum2;

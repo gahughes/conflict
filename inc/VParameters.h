@@ -5,6 +5,7 @@
 #include <TNamed.h>
 #include <TROOT.h>
 #include <TSystem.h>
+#include <TTree.h>
 
 #include <math.h>
 #include <iostream>
@@ -39,10 +40,13 @@ class VParameters
 	vector<string> sRules;
 
 	vector< vector<int> > iRules;
+	//vector< string > sRules;
 
 	int iNumberOfParties;
 	int iNumberOfIssues;
 	int iNumberOfRules;
+
+	vector<TTree*> tRules;
 
 };
 
