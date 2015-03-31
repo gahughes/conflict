@@ -36,7 +36,6 @@ int main(int argc, char *argv[])
 // Do the reading in of input file
    fReadRunParameter->readInPutFile( fReadRunParameter->getRunParameter()->fInPutFile );
 
-/*
 // LOOP
    VLoop *fLoop = new VLoop( fReadRunParameter->getRunParameter() );
    //fTrace->initialize();
@@ -45,7 +44,6 @@ int main(int argc, char *argv[])
 // Delete classes
    delete fReadRunParameter;
    delete fLoop;
-*/
 
    cout << endl;
    cout << "Program Finished Successfully." << endl;

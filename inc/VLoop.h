@@ -39,10 +39,15 @@ class VLoop : VParameters
 
 	void analyse();
 	int convertDectoBin(int i, int j);
-	int applyRule( vector<int> iSit, vector<int> iRule );
-	int minInvasive( vector< vector<int> > iTable, vector< vector<int> > iRule );
-	int maxAlgo( vector< vector<int> > iTable, vector< vector<int> > iRule );
-	int compAlgo( vector< vector<int> > iTable, vector< vector<int> > iRule );
+	//int applyRule( vector<int> iSit, vector<int> iRule );
+
+	vector<int> minInvasive( vector< vector<Long64_t> > iTable, vector< vector<int> > iRule );
+	vector<int> maxAlgo( vector< vector<Long64_t> > iTable, vector< vector<int> > iRule );
+	vector<int> compAlgo( vector< vector<Long64_t> > iTable, vector< vector<int> > iRule );
+
+	void fillTables( vector< vector<int> > iSits );
+	void doCuts();
+	void doCuts_temp();
 
 };
 

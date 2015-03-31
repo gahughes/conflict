@@ -41,5 +41,7 @@ class VReadRunParameter
 	// Read in the light curves
 	void readInPutFile(string a);
 
+        void fillAlphabet();
+
 };
 #endif

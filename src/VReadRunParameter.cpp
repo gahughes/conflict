@@ -72,9 +72,15 @@ void VReadRunParameter::printStartMessage()
   cout << endl;
   cout << "A Model of Conflict Resolution" << endl;
   cout << " " << endl;
-  cout << "Gareth Hughes\t\tFrieder Lempp" << endl;
-  cout << "ETH Zurich\t\tMassey University" << endl;
-  cout << "ghughes@phys.ethz.ch\tF.Lempp@massey.ac.nz" << endl;
+  cout << "\tFrieder Lempp" << endl;
+  cout << "\tMassey University" << endl;
+  cout << "\tF.Lempp@massey.ac.nz" << endl;
+  cout << " " << endl;
+  cout << " " << endl;
+  cout << "Code by: " << endl;
+  cout << "\tGareth Hughes" << endl;
+  cout << "\tETH Zurich" << endl;
+  cout << "\tghughes@ohys.ethz.ch" << endl;
   cout << " " << endl;
   cout << endl;
 
@@ -139,4 +145,39 @@ void VReadRunParameter::readInPutFile( string fInfile )
   fRunPara->iNumberOfIssues  = iNum2;
   fRunPara->iNumberOfRules   = iNum3;
 
+  fillAlphabet();
+
 }
+
+void VReadRunParameter::fillAlphabet()
+{
+
+ fRunPara->sAlphabet.push_back("a"); 
+ fRunPara->sAlphabet.push_back("b"); 
+ fRunPara->sAlphabet.push_back("c"); 
+ fRunPara->sAlphabet.push_back("d"); 
+ fRunPara->sAlphabet.push_back("e"); 
+ fRunPara->sAlphabet.push_back("f"); 
+ fRunPara->sAlphabet.push_back("g"); 
+ fRunPara->sAlphabet.push_back("h"); 
+ fRunPara->sAlphabet.push_back("i"); 
+ fRunPara->sAlphabet.push_back("j"); 
+ fRunPara->sAlphabet.push_back("k"); 
+ fRunPara->sAlphabet.push_back("l"); 
+ fRunPara->sAlphabet.push_back("m"); 
+ fRunPara->sAlphabet.push_back("n"); 
+ fRunPara->sAlphabet.push_back("o"); 
+ fRunPara->sAlphabet.push_back("p"); 
+ fRunPara->sAlphabet.push_back("q"); 
+ fRunPara->sAlphabet.push_back("u"); 
+ fRunPara->sAlphabet.push_back("r"); 
+ fRunPara->sAlphabet.push_back("s"); 
+ fRunPara->sAlphabet.push_back("t"); 
+ fRunPara->sAlphabet.push_back("v"); 
+ fRunPara->sAlphabet.push_back("w"); 
+ fRunPara->sAlphabet.push_back("x"); 
+ fRunPara->sAlphabet.push_back("y"); 
+ fRunPara->sAlphabet.push_back("z"); 
+
+}
+

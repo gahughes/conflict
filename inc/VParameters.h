@@ -47,7 +47,8 @@ class VParameters
 	int iNumberOfRules;
 
 	vector<TTree*> tRules;
-
+	vector<string> sAlphabet;
+        vector< vector<Long64_t> > vTable;
 };
 
 #endif
