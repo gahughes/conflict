@@ -58,8 +58,9 @@ void VLoop::analyse()
 
   for( int i = 0; i < fRunPara->iNumberOfRules; i++ )
   {
-    cout << fRunPara->sParties[fRunPara->iRules[i][0]] << " ";
-    cout << fRunPara->sRules[i].c_str() << " ";
+    cout << fRunPara->sParties[fRunPara->iRules[i][0]] << "\t";
+    cout << fRunPara->iRules[i][1] << "\t";
+    cout << fRunPara->sRules[i].c_str() << "\t";
     cout << endl;
   }
 
