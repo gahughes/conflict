@@ -23,6 +23,7 @@ using namespace std;
 int main(int argc, char *argv[]) 
 {
 
+// seed and random number generator
    int seed = time(NULL)*getpid();
    srand(seed);
 
